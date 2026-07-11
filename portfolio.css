@@ -1,0 +1,160 @@
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth; /* Menu par click karne se smooth scroll hoga */
+}
+
+body {
+    background-color: #0f172a; /* Premium Dark Navy Blue */
+    color: #e2e8f0;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8; /* Neon Blue */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #94a3b8;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 100px 8%;
+    text-align: center;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+}
+
+/* --- Skills Section --- */
+.skills-section {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #1e293b;
+}
+
+.section-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Mobile par automatic adjust hone ke liye */
+}
+
+.skill-badge {
+    background-color: #334155;
+    color: #38bdf8;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #475569;
+}
+
+/* --- Projects Section (Grid) --- */
+.projects-section {
+    padding: 80px 8%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Card Hover effect */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Mobile par single column */
+    }
+    .hero-content h1 {
+        font-size: 34px;
+    }
+}
